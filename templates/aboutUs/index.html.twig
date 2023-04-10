@@ -1,0 +1,356 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}A propos de nous {% endblock %}
+
+{% block carousel %}
+    <section class="sub-banner bg-parallax" style="background:url({{ asset('assets/images/bg/bg-1.jpg') }}) no-repeat; background-size:cover;">
+        <div class="container">
+            <div class="position-center-center">
+                <h1>About us</h1>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block content %}
+    <!-- Services -->
+    <section class="welcome padding-top-100 padding-bottom-100 ">
+        <div class="container">
+            <!-- HEADING BLOCK -->
+            <div class="heading-block text-center margin-bottom-80">
+                <h3>Welcome To Fugiat</h3>
+                <hr>
+                <span class=" margin-top-20">The weather started getting rough - the tiny ship was tossed. If not for the courage of the fearless crew the Minnow would be lost. the Minnow always wanted to have a neighbor just like you. I've always wanted to live in a neighborhood with you. </span> </div>
+
+            <!-- Icon Row -->
+
+            <div class="row">
+                <div class="col-md-7">
+                    <ul class="row margin-top-70">
+
+                        <!-- Services -->
+                        <li class="col-md-6 margin-bottom-50">
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="icon"> <i class="ion-ios-speedometer-outline"></i> </div>
+                                </div>
+                                <div class="media-body">
+                                    <h5>who we are</h5>
+                                    <p>Takin' a break from all your wo ries sure would help a lot. </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Services -->
+                        <li class="col-md-6 margin-bottom-50">
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="icon"> <i class="ion-ios-color-wand-outline"></i> </div>
+                                </div>
+                                <div class="media-body">
+                                    <h5>what we do</h5>
+                                    <p>Takin' a break from all your wo ries sure would help a lot. </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Services -->
+                        <li class="col-md-6">
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="icon"> <i class="ion-ios-infinite-outline"></i> </div>
+                                </div>
+                                <div class="media-body">
+                                    <h5>our great team</h5>
+                                    <p>Takin' a break from all your wo ries sure would help a lot. </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-md-6">
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="icon"> <i class="ion-ios-monitor-outline"></i> </div>
+                                </div>
+                                <div class="media-body">
+                                    <h5>our achievements</h5>
+                                    <p>Takin' a break from all your wo ries sure would help a lot. </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-5"> <img class="img-responsive" src="{{ asset('assets/images/intro-tabs.png')}}" alt="" > </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Coporate -->
+    <section class="list-style-featured light-gray-bg padding-top-80 padding-bottom-80 ">
+        <div class="container">
+
+            <!-- HEADING BLOCK -->
+            <div class="heading-block text-center margin-bottom-80">
+                <h3>Fugiat Core Features</h3>
+                <hr>
+                <span class=" margin-top-20">The weather started getting rough - the tiny ship was tossed. If not for the courage of the fearless crew the Minnow would be lost. the Minnow always wanted to have a neighbor just like you. I've always wanted to live in a neighborhood with you. </span> </div>
+            <div class="row">
+
+                <!-- LIST LEFT -->
+                <div class="col-md-4">
+                    <ul class="margin-top-50 text-right">
+                        <li>
+                            <div class="media">
+                                <div class="media-body">
+                                    <h4>well layered</h4>
+                                    <p>Friendly neighbors there that's where we meet can you tell me how to get. </p>
+                                </div>
+                                <div class="media-right">
+                                    <div class="icon"> <img src="{{ asset('assets/images/list-icon-1.png')}}" alt="" ></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-body">
+                                    <h4>user friendly</h4>
+                                    <p>Friendly neighbors there that's where we meet can you tell me how to get. </p>
+                                </div>
+                                <div class="media-right">
+                                    <div class="icon"> <img src="{{ asset('assets/images/list-icon-2.png')}}" alt=""></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-body">
+                                    <h4>24/7 support</h4>
+                                    <p>Friendly neighbors there that's where we meet can you tell me how to get.</p>
+                                </div>
+                                <div class="media-right">
+                                    <div class="icon"> <img src="{{ asset('assets/images/list-icon-3.png')}}" alt=""></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- LIST IMAGE -->
+                <div class="col-md-4 text-center no-padding"> <img class="img-responsive" src="{{ asset('assets/images/iphone-2.png') }}" alt=""> </div>
+
+                <!-- LIST ICON RIGHT -->
+                <div class="col-md-4">
+                    <ul class="margin-top-50">
+                        <li>
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="icon"> <img src="{{ asset('assets/images/list-icon-4.png') }}" alt=""> </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4>elegent Design</h4>
+                                    <p>Friendly neighbors there that's where we meet can you tell me how to get. </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="icon"> <img src="{{ asset('assets/images/list-icon-5.png') }}" alt="" > </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4>different layout</h4>
+                                    <p>Friendly neighbors there that's where we meet can you tell me how to get. </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="icon"> <img src="{{ asset('assets/images/list-icon-6.png') }}" alt="" > </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4>unique elements</h4>
+                                    <p>Friendly neighbors there that's where we meet can you tell me how to get. </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wgy Choose -->
+    <section class="why-choose padding-top-100 padding-bottom-100">
+        <div class="container">
+            <!-- HEADING BLOCK -->
+            <div class="heading-block text-center margin-bottom-80">
+                <h3>Why Choose US</h3>
+                <hr>
+                <span class=" margin-top-20">The weather started getting rough - the tiny ship was tossed. If not for the courage of the fearless crew the Minnow would be lost. the Minnow always wanted to have a neighbor just like you. I've always wanted to live in a neighborhood with you. </span> </div>
+
+            <!-- List  -->
+            <div class="row">
+                <div class="col-md-7">
+                    <ul>
+
+                        <!-- HEADING -->
+                        <li>
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="icon"> 1 </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4>unique elements</h4>
+                                    <p>The Brady Bunch the Brady Bunch that's the way we all became the Brady Bunch. So get a witch's shawl on a broomstick you can crawl on. </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Experienced team -->
+                        <li>
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="icon"> 2 </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Experienced team</h4>
+                                    <p>The Brady Bunch the Brady Bunch that's the way we all became the Brady Bunch. So get a witch's shawl on a broomstick you can crawl on. </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- HEADING -->
+                        <li>
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="icon"> 3 </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4>great services</h4>
+                                    <p>The Brady Bunch the Brady Bunch that's the way we all became the Brady Bunch. So get a witch's shawl on a broomstick you can crawl on. </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-5 text-bold"> <img class="img-responsive" src="{{ asset('assets/images/why-choose-img.png') }}" alt="" > </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="clients purple-bg text-center padding-top-50 padding-bottom-50">
+        <div class="container">
+            <ul class="row">
+                <li class="col-sm-2"><img src="{{ asset('assets/images/client-1.png') }}" alt=""></li>
+                <li class="col-sm-2"><img src="{{ asset('assets/images/client-2.png') }}" alt=""></li>
+                <li class="col-sm-2"><img src="{{ asset('assets/images/client-3.png') }}" alt=""></li>
+                <li class="col-sm-2"><img src="{{ asset('assets/images/client-4.png') }}" alt=""></li>
+                <li class="col-sm-2"><img src="{{ asset('assets/images/client-5.png') }}" alt=""></li>
+                <li class="col-sm-2"><img src="{{ asset('assets/images/client-6.png') }}" alt=""></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="padding-top-100 padding-bottom-100">
+        <div class="container">
+            <!-- HEADING BLOCK -->
+            <div class="heading-block text-center margin-bottom-80">
+                <h3>Our Expert Team Members</h3>
+                <hr>
+                <span class=" margin-top-20">The weather started getting rough - the tiny ship was tossed. If not for the courage of the fearless crew the Minnow would be lost. the Minnow always wanted to have a neighbor just like you. I've always wanted to live in a neighborhood with you. </span> </div>
+        </div>
+
+        <!-- Team -->
+        <div class="expert-team">
+            <div class="container">
+                <ul class="row">
+                    <!-- TEAM MEMBER -->
+                    <li class="col-md-3">
+                        <article class="z-depth-1 padding-30">
+                            <div class="img-circle"> <img src="{{ asset('assets/images/team-img-1.jpg') }}" alt="" >
+                                <h5>James Hopper</h5>
+                                <span>Lead Developer</span>
+                                <p>We finally got a piece of the pie. Makin' your way in the world today week long.</p>
+                                <ul class="social-icons">
+                                    <li><a href="#."><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#."><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#."><i class="fa fa-google"></i></a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- TEAM MEMBER -->
+                    <li class="col-md-3">
+                        <article class="z-depth-1 padding-30">
+                            <div class="img-circle"> <img src="{{ asset('assets/images/team-img-1.jpg') }}" alt="" >
+                                <h5>martin guptil</h5>
+                                <span>web Developer</span>
+                                <p>We finally got a piece of the pie. Makin' your way in the world today week long.</p>
+                                <ul class="social-icons">
+                                    <li><a href="#."><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#."><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#."><i class="fa fa-google"></i></a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- TEAM MEMBER -->
+                    <li class="col-md-3">
+                        <article class="z-depth-1 padding-30">
+                            <div class="img-circle"> <img src="{{ asset('assets/images/team-img-1.jpg')}}" alt="" >
+                                <h5>andrew hilson</h5>
+                                <span>Designer</span>
+                                <p>We finally got a piece of the pie. Makin' your way in the world today week long.</p>
+                                <ul class="social-icons">
+                                    <li><a href="#."><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#."><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#."><i class="fa fa-google"></i></a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- TEAM MEMBER -->
+                    <li class="col-md-3">
+                        <article class="z-depth-1 padding-30">
+                            <div class="img-circle"> <img src="{{ asset('assets/images/team-img-1.jpg')}}" alt="" >
+                                <h5>robert jakis</h5>
+                                <span>Marketing</span>
+                                <p>We finally got a piece of the pie. Makin' your way in the world today week long.</p>
+                                <ul class="social-icons">
+                                    <li><a href="#."><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#."><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#."><i class="fa fa-google"></i></a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Letter -->
+    <div class="container">
+        <section class="news-letter">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>You can unsubscribe anytime you want</p>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <input type="email" class="z-depth-1" placeholder="Email address" required>
+                        <button type="submit" class="btn waves-effect waves-light">subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}

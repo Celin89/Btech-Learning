@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="M_Adnan" />
+<!-- Document Title -->
+
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
+
+<!-- FontsOnline -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300,100' rel='stylesheet' type='text/css'>
+
+<!-- StyleSheets -->
+<link rel="stylesheet" href="{{ asset('assets/css/ionicons.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/materialize.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/bootstrap/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+	{%  block css %}{%  endblock  %}
+
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/plugin/css/settings.css') }}" media="screen" />
+
+<!-- JavaScripts -->
+<script src="{{ asset('assets/js/vendors/modernizr.js') }}"></script>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader">
+    <div class="position-center-center"> <img src="{{ asset('assets/images/logo.png') }}" alt="" >
+      <div class="progress">
+        <div class="indeterminate"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Page Wrapper -->
+<div id="wrap"> 
+  
+  <!-- Top bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="col-md-6">
+        <ul class="row">
+          <li class="margin-right-20">
+            <p><i class="fa fa-envelope-o margin-right-10"></i>Info@Domain.com</p>
+          </li>
+          <li class="margin-right-20">
+            <p><i class="fa fa-phone margin-right-10"></i> +01 123 456 78</p>
+          </li>
+          <li>
+            <p><i class="fa fa-user margin-right-10"></i> Account</p>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Social Icon -->
+      <div class="col-md-6 text-right social-top"> 
+        <!-- Social Icon -->
+        <ul class="social-icons">
+          <li><a href="#."><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#."><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#."><i class="fa fa-google"></i></a></li>
+          <li><a href="#."><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#."><i class="fa fa-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Header -->
+  {{ include('includes/header.html.twig') }}
+  <!-- End Header --> 
+  
+  <!--======= HOME MAIN SLIDER =========-->
+
+	{%  block carousel %}
+  	<section class="home-slider">
+    <div class="tp-banner-container">
+      <div class="tp-banner-fix">
+        <ul>
+          <!-- SLIDE  -->
+          <li data-transition="random" data-slotamount="7">
+            <!-- MAIN IMAGE -->
+            <img src="{{ asset('assets/images/main-slider/btech_img_1.jpg') }}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+            <!-- LAYERS -->
+
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption text-uppercase font-bold sft tp-resizeme"
+			 data-x="center" data-hoffset="0"
+			 data-y="center" data-voffset="-100"
+			 data-speed="500"
+			 data-start="500"
+			 data-easing="Power3.easeInOut"
+			 data-splitin="words"
+			 data-splitout="none"
+		 	 data-elementdelay="0.1"
+			 data-endelementdelay="0.1"
+			 data-endspeed="700"
+			 style="z-index: 5; font-size:65px; color:#fff;">Easy to Use Modern HTML5 Template</div>
+
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption letter-space-1 sfb tp-resizeme"
+			 data-x="center" data-hoffset="0"
+			 data-y="center" data-voffset="0"
+			 data-speed="500"
+			 data-start="1000"
+			 data-easing="Power3.easeInOut"
+			 data-splitin="words"
+			 data-splitout="none"
+		 	 data-elementdelay="0.1"
+			 data-endelementdelay="0.1"
+			 data-endspeed="700"
+			 style="z-index: 5; font-size:25px; color:#fff; font-weight:100;">Vous accompagne dans la conception et développement des solutions informatiques et télématiques , le support et l’assistance auprès des entreprises pour les solutions informatiques et télématiques délivrées.</div>
+
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption sfb tp-resizeme"
+			 data-x="center" data-hoffset="0"
+			 data-y="center" data-voffset="100"
+			 data-speed="500"
+			 data-start="1500"
+			 data-easing="Power3.easeInOut"
+			 data-splitin="none"
+			 data-splitout="none"
+			 data-elementdelay="0.1"
+			 data-endelementdelay="0.1"
+			 data-endspeed="300"
+			 style="z-index: 6; white-space: normal;"><a href="#" class="btn btn-med btn-color">PURCHASES NOW</a> </div>
+          </li>
+
+          <!-- SLIDE  -->
+          <li data-transition="random" data-slotamount="7">
+            <!-- MAIN IMAGE -->
+            <img src="{{ asset('assets/images/main-slider/btech_img_3.jpg') }}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+            <!-- LAYERS -->
+
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption text-uppercase font-bold sft tp-resizeme"
+			 data-x="center" data-hoffset="0"
+			 data-y="center" data-voffset="-100"
+			 data-speed="500"
+			 data-start="500"
+			 data-easing="Power3.easeInOut"
+			 data-splitin="words"
+			 data-splitout="none"
+		 	 data-elementdelay="0.1"
+			 data-endelementdelay="0.1"
+			 data-endspeed="700"
+			 style="z-index: 5; font-size:65px; color:#fff;">Clean and Pixel Perfect Design</div>
+
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption letter-space-1 sfb tp-resizeme"
+			 data-x="center" data-hoffset="0"
+			 data-y="center" data-voffset="0"
+			 data-speed="500"
+			 data-start="1000"
+			 data-easing="Power3.easeInOut"
+			 data-splitin="words"
+			 data-splitout="none"
+		 	 data-elementdelay="0.1"
+			 data-endelementdelay="0.1"
+			 data-endspeed="700"
+			 style="z-index: 5; font-size:25px; color:#fff; font-weight:100;">Dolor sit amet lorem nunc gravida dolor ipsum</div>
+
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption sfb tp-resizeme"
+			 data-x="center" data-hoffset="0"
+			 data-y="center" data-voffset="100"
+			 data-speed="500"
+			 data-start="1500"
+			 data-easing="Power3.easeInOut"
+			 data-splitin="none"
+			 data-splitout="none"
+			 data-elementdelay="0.1"
+			 data-endelementdelay="0.1"
+			 data-endspeed="300"
+			 style="z-index: 6; white-space: normal;"><a href="#" class="btn btn-med btn-color">PURCHASES NOW</a> </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+	{% endblock %}
+
+	<!-- Content -->
+  <div id="content">
+    
+    {% block content %}{% endblock  %}
+  </div>
+  <!-- End Content --> 
+  
+  <!-- Footer -->
+{{ include('includes/footer.html.twig') }}
+  <!-- End Footer --> 
+</div>
+<!-- End Page Wrapper --> 
+
+<!-- JavaScripts --> 
+<script src="{{ asset('assets/js/vendors/jquery/jquery.min.js') }}"></script> 
+<script src="{{ asset('assets/js/vendors/wow.min.js') }}"></script> 
+<script src="{{ asset('assets/js/vendors/bootstrap.min.js') }}"></script> 
+<script src="{{ asset('assets/js/vendors/materialize.min.js') }}"></script> 
+<script src="{{ asset('assets/js/vendors/own-menu.js') }}"></script> 
+<script src="{{ asset('assets/js/vendors/flexslider/jquery.flexslider-min.js') }}"></script> 
+<script src="{{ asset('assets/js/vendors/jquery.isotope.min.js') }}"></script> 
+<script src="{{ asset('assets/js/vendors/owl.carousel.min.js') }}"></script> 
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
+<script type="text/javascript" src="{{ asset('assets/plugin/js/jquery.themepunch.tools.min.js') }}"></script> 
+<script type="text/javascript" src="{{ asset('assets/plugin/js/jquery.themepunch.revolution.min.js') }}"></script> 
+<script src="{{ asset('assets/js/main.js') }}"></script>
+
+{%  block js %}{%  endblock  %}
+</body>
+</html>
