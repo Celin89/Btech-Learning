@@ -2,19 +2,646 @@
 
 {% block title %}Hello HomeController!{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+{% block content %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <!--Main Slider-->
+    <section class="main-slider" data-start-height="750" data-slide-overlay="yes">
+    	
+        <div class="tp-banner-container">
+            <div class="tp-banner">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        {% for key,img in images %}
+                        <li data-target="#myCarousel" data-slide-to="{{ key }}" {% if key == 0 %}class="active"{% endif %}></li>
+                        {% endfor %}
+                      </ol>
+                  
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner">
+                        {% for key, banner in images %}
+                        <div class="item {% if key == 0 %}active{% endif %}" >
+                          <img src="/upload/{{ banner.getHomeSlide() }}" alt="Los Angeles" style="width:100%;">
+                          <div class="carousel-caption" >
+                            <h3 style="margin-top: 100%;">{{ banner.title }}</h3>
+                            <p>{{ banner.description|striptags}}</p>
+                          </div>
+                        </div>
+                        {% endfor %}
+                      </div>
+                  
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--About Title-->
+    <section class="about-title">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+            	<div class="column col-md-4 col-sm-12 col-xs-12">
+                	<h2>Maintenant<br> Vous pouvez prendre votre business<br> Bien et Grand</h2>
+                    <a href="{{path('construction')}}">Savoir plus</a>
+                </div>
+                <div class="column col-md-8 col-sm-12 col-xs-12">
+                	<h3>J'ai nommé le commun, mais le bon n'aurait guère dissuadé l'élu. Qui dit à ceux qui lisent ce qu'il a dit ? Vous devez interpréter la nourriture et lui, lui faire de la publicité de la bonne manière.</h3>
+                    <div class="text">J'ai nommé le commun, mais le bon n'aurait guère dissuadé l'élu. Qui suis-je pour dire qu'ils doivent lui lire la loi, car ils ne doivent pas être dits à pied ? Vous devez traduire la nourriture et lui, lui faire de la publicité et à juste titre. Il vient de s'en tirer. Mais que le plaisir soit l'ennemi du fer, que tous les nôtres soient médiocres, afin qu'il soit sauvé par l'attaque, mais qu'il soit en désaccord avec son estime de vivre, afin qu'il puisse adapter le nouveau aux erreurs.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End About Title-->
+    
+    <!--Services Section-->
+    <section class="services-section">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+            
+                <!--Services Block-->
+                <div class="services-block col-md-4 col-sm-6 col-xs-12">
+                    <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <figure class="image-box">
+                            <a href="{{path('construction')}}"><img src="{{ asset('assets/images/resource/services-1.jpg') }}" alt="" /></a>
+                            <div class="overlay-box">
+                                <h3><a href="{{path('construction')}}">Ventes & Marketing <br> Coaching</a></h3>
+                                <a href="{{path('construction')}}" class="right-arrow fa fa-angle-right"></a>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+                
+                <!--Services Block-->
+                <div class="services-block col-md-4 col-sm-6 col-xs-12">
+                    <div class="inner-box wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <figure class="image-box">
+                            <a href="{{path('construction')}}"><img src="{{ asset('assets/images/resource/services-2.jpg') }}" alt="" /></a>
+                            <div class="overlay-box">
+                                <h3><a href="{{path('construction')}}">Négociation commerciale &<br> Conseil </a></h3>
+                                <a href="{{path('construction')}}" class="right-arrow fa fa-angle-right"></a>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+                
+                <!--Services Block-->
+                <div class="services-block col-md-4 col-sm-6 col-xs-12">
+                    <div class="inner-box wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <figure class="image-box">
+                            <a href="{{path('construction')}}"><img src="{{ asset('assets/images/resource/services-3.jpg') }}" alt="" /></a>
+                            <div class="overlay-box">
+                                <h3><a href="{{path('construction')}}">Conseiller & Formateur <br> Coaching</a></h3>
+                                <a href="{{path('construction')}}" class="right-arrow fa fa-angle-right"></a>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </section>
+    <!--End Services Section-->
+    
+    <!--Program Section-->
+    <section class="program-section">
+    	<div class="auto-container">
+        
+        	<!--Title Box-->
+        	<div class="title-box clearfix">
+            	<h3>Nous offrons un programme de formation et de coaching !!</h3>
+                <a href="{{path('construction')}}">Vois Tous les Programes</a>
+            </div>
+            
+            <div class="row clearfix">
+            
+            	<!--Program Block-->
+            	<div class="program-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<div class="icon-box"><span class="icon flaticon-money-bag"></span></div>
+                    	<h3><a href="{{path('construction')}}">Training Coach</a></h3>
+                        <div class="text">Nous avons beaucoup d'excellents services qui peuvent assez pour vous aider</div>
+                    </div>
+                </div>
+                
+                <!--Program Block-->
+            	<div class="program-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<div class="icon-box"><span class="icon flaticon-money-bag"></span></div>
+                    	<h3><a href="{{path('construction')}}">Negotiateur</a></h3>
+                        <div class="text">Nous avons beaucoup d'excellents services qui peuvent assez pour vous aider</div>
+                    </div>
+                </div>
+                
+                <!--Program Block-->
+            	<div class="program-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<div class="icon-box"><span class="icon flaticon-money-bag"></span></div>
+                    	<h3><a href="{{path('construction')}}">Formation des conseillers</a></h3>
+                        <div class="text">Nous avons beaucoup d'excellents services qui peuvent assez pour vous aider</div>
+                    </div>
+                </div>
+                
+                <!--Program Block-->
+            	<div class="program-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<div class="icon-box"><span class="icon flaticon-money-bag"></span></div>
+                    	<h3><a href="{{path('construction')}}">Consultation en vente</a></h3>
+                        <div class="text">Nous avons beaucoup d'excellents services qui peuvent assez pour vous aider</div>
+                    </div>
+                </div>
+                
+                <!--Program Block-->
+            	<div class="program-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<div class="icon-box"><span class="icon flaticon-money-bag"></span></div>
+                    	<h3><a href="{{path('construction')}}">Coaching en vente</a></h3>
+                        <div class="text">Nous avons beaucoup d'excellents services qui peuvent assez pour vous aider</div>
+                    </div>
+                </div>
+                
+                <!--Program Block-->
+            	<div class="program-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<div class="icon-box"><span class="icon flaticon-money-bag"></span></div>
+                    	<h3><a href="{{path('construction')}}">Meilleure Vente</a></h3>
+                        <div class="text">Nous avons beaucoup d'excellents services qui peuvent assez pour vous aider</div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    <!--End Program Section-->
+    
+    <!--Video Section-->
+    <section class="video-section" style="background-image: url({{ asset('assets/images/background/1.jpg') }})">
+    	<div class="auto-container">
+            <div class="inner-box">
+                <a class="icon-box wow zoomInStable lightbox-image play-link" data-wow-delay="0ms" data-wow-duration="2000ms"  href="https://www.youtube.com/watch?v=1sVEYNH8gbk"><span class="flaticon-arrow"></span></a>
+                <h3>Notre vidéo introductive</h3>
+                <div class="text">Nous avons beaucoup d'excellents services qui peuvent assez pour vous aider</div>
+                <a href="{{path('construction')}}" class="btn-style-one theme-btn">More About Us</a>
+            </div>
+        </div>
+    </section>
+    <!--End Video Section-->
+    
+    <!--Counter Section-->
+    <section class="counter-section">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+            	<div class="image-column col-lg-5 col-md-4 col-sm-12 col-xs-12">
+                	<figure class="image-box wow slideInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    	<img src="{{ asset('assets/images/resource/couch-image.png') }}" alt="" />
+                    </figure>
+                </div>
+                <div class="content-column col-lg-7 col-md-8 col-sm-12 col-xs-12">
+                	<div class="inner-box">
+                    	<h2>Quel Business Coacing <br> Peut vous aider ?</h2>
+                        <div class="style-text">Nous avons beaucoup d'excellents services qui peuvent assez pour vous aider</div>
+                        <div class="text">La douleur elle-même est très importante, la douleur en vaut la peine. Ils ont été perçus par le régime gouvernemental <br>vous. Et il ne brute aucun nouveau texte factice admu nous.</div>
+                        
+                        <!--Fact Counter-->
+                        <div class="fact-counter">
+                            <div class="row clearfix">
+                            
+                                <!--Counter Column-->
+                                <div class="column col-md-4 col-sm-4 col-xs-12 counter-column wow fadeIn" data-wow-duration="0ms">
+                                    <div class="inner">
+                                        <div class="count-outer">
+                                            <div class="count-text" data-speed="2000" data-stop="18">0</div><span class="year">years</span>
+                                        </div>
+                                        <h4 class="counter-title">Expereince</h4>
+                                    </div>
+                                </div>
+                                
+                                <!--Counter Column-->
+                                <div class="column col-md-4 col-sm-4 col-xs-12 counter-column wow fadeIn" data-wow-duration="0ms">
+                                    <div class="inner">
+                                        <div class="count-outer">
+                                            <div class="count-text" data-speed="2000" data-stop="20">0</div><span class="year">K</span>
+                                        </div>
+                                        <h4 class="counter-title">Client Satisfait</h4>
+                                    </div>
+                                </div>
+                                
+                                <!--Counter Column-->
+                                <div class="column col-md-4 col-sm-4 col-xs-12 counter-column wow fadeIn" data-wow-duration="0ms">
+                                    <div class="inner">	
+                                        <div class="count-outer">
+                                            <div class="count-text" data-speed="4000" data-stop="1200">0</div><span class="plus-icon">+</span>
+                                        </div>
+                                        <h4 class="counter-title">Project réalisé</h4>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'H:/Btch-Expert-Web/Fugiat/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'H:/Btch-Expert-Web/Fugiat/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+                        <a href="{{path('contact')}}" class="theme-btn btn-style-three">Obtenez un devis ?</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Counter Section-->
+    
+    <!--Fullwidth Section One-->
+    <section class="fullwidth-section-one" style="background-image: url({{ asset('assets/images/resource/fullwidth-1.jpg') }});">
+    	<div class="outer-box clearfix">
+        
+        	<!--left column-->
+        	<div class="left-column clearfix">
+            	<div class="content-box clearfix">
+                	<div class="inner-box">
+                    	<h3>Pourquoi nous choisir ?</h3>
+                        <h4>Voici quelques sous-titres de ce que vous voulez</h4>
+                        <div class="text">Que la douleur elle-même soit une accusation immédiate de violence ; Notre sapin lui tem helluri. Avec un bon sens de l'humour, le médecin se sent mal à l'aise.</div>
+                        <a href="{{path('construction')}}" class="theme-btn btn-style-one">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!--right column-->
+            <div class="right-column">
+            	<div class="services-outer">
+                	<div class="clearfix">
+                    
+                    	<!--Services Block Two-->
+                        <div class="services-block-two col-md-6 col-sm-6 col-xs-12">
+                        	<div class="inner-box">
+                            	<div class="icon-box"><span class="icon flaticon-high-volume"></span></div>
+                                
+                                <h3>Formateur d'entraîneurs experts</h3>
+                                <div class="text">La douleur elle-même est très importante, la douleur pr. Ils ont été perçus par le gouvernement brut aucun nouveau texte factice admuo nous beaucoup de ruse.</div>
+                            </div>
+                        </div>
+                        
+                        <!--Services Block Two-->
+                        <div class="services-block-two col-md-6 col-sm-4 col-xs-12">
+                        	<div class="inner-box">
+                            	<div class="icon-box"><span class="icon flaticon-money-bag"></span></div>
+                                <h3>Vaut chaque centime</h3>
+                                <div class="text">La douleur elle-même est très importante, la douleur pr. Ils ont été perçus par le gouvernement brut aucun nouveau texte factice admuo nous beaucoup de ruse.</div>
+                            </div>
+                        </div>
+                        
+                        <!--Services Block Two-->
+                        <div class="services-block-two col-md-6 col-sm-4 col-xs-12">
+                        	<div class="inner-box">
+                            	<div class="icon-box"><span class="icon flaticon-rocket"></span></div>
+                                <h3>Multi Times Award Winner</h3>
+                                <div class="text">La douleur elle-même est très importante, la douleur pr. Ils ont été perçus par le gouvernement brut aucun nouveau texte factice admuo nous beaucoup de ruse.</div>
+                            </div>
+                        </div>
+                        
+                        <!--Services Block Two-->
+                        <div class="services-block-two col-md-6 col-sm-4 col-xs-12">
+                        	<div class="inner-box">
+                            	<div class="icon-box"><span class="icon flaticon-umbrella"></span></div>
+                                <h3>Entreprise de confiance</h3>
+                                <div class="text">La douleur elle-même est très importante, la douleur pr. Ils ont été perçus par le gouvernement brut aucun nouveau texte factice admuo nous beaucoup de ruse.</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!--End Fullwidth Section One-->
+    
+    <!--Team Section-->
+    <section class="team-section">
+    	<div class="auto-container">
+        	<h2>Nos Expert</h2>
+            <div class="three-item-carousel">
+            
+            	<!--Team Member-->
+                <div class="team-member">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <img src="{{ asset('assets/images/team/paul_ghislain.png') }}" alt="" />
+                            <div class="overlay-box">
+                            	<ul class="social-icon-two">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><a href="#">Jannatul Ferdous</a></h3>
+                            <div class="designation">Business & Marketing Expert</div>
+                            <div class="text">Personne, d'ailleurs, ne souhaite obtenir la douleur pour que la douleur le suive, mais comme parce que.</div>
+                            <a href="#" class="see-profile">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Team Member-->
+                <div class="team-member">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <img src="{{ asset('assets/images/team/igor_gamath.jpg') }}" alt="" />
+                            <div class="overlay-box">
+                            	<ul class="social-icon-two">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><a href="#">Rashed Kabir</a></h3>
+                            <div class="designation">Business & Marketing Expert</div>
+                            <div class="text">Personne, d'ailleurs, ne souhaite obtenir la douleur pour que la douleur le suive, mais comme parce que.</div>
+                            <a href="#" class="see-profile">Voir Profile</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Team Member-->
+                <div class="team-member">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <img src="{{ asset('assets/images/team/christ_celin.PNG') }}" alt="" />
+                            <div class="overlay-box">
+                            	<ul class="social-icon-two">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h3><a href="#">Jonathan Smith</a></h3>
+                            <div class="designation">Business & Marketing Expert</div>
+                            <div class="text">Personne, d'ailleurs, ne souhaite obtenir la douleur pour que la douleur le suive, mais comme parce que.</div>
+                            <a href="#" class="see-profile">Voir Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Experts Section-->
+    
+    <!--Fullwidth Section Two-->
+    <section class="fullwidth-section-two">
+    	<div class="outer-box clearfix">
+        	<!--Left Column-->
+        	<div class="left-column clearfix">
+            	<div class="content-box clearfix">
+                	<div class="inner-box">
+                    	<h2>Commentaires des clients</h2>
+                        <h3>Ne nous entendez pas seulement, mais consultez également les commentaires de nos clients</h3>
+                        <div class="single-item-carousel">
+                        
+                        	<!--Testimonial Block-->
+                            <div class="testimonial-block">
+                            	<div class="inner">
+                                	<div class="text">Le client est très content, et tout épicurien où. L'utilisation de pertina antiopam amet modera tius fuque finique medi ocrem voluptau deux eius lorem car ils lorem amet dolo lui-même sudu. Ils n'ont pas besoin de chacun d'eux, à travers le décorum, vous travaillerez sur le sadipscing.</div>
+                                    <div class="client-info">
+                                    	<div class="image"><img src="{{ asset('assets/images/resource/client-1.jpg') }}" alt="" /></div>
+                                        <h4>Rashed kabir</h4>
+                                        <div class="designation">Directeur Général</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Testimonial Block-->
+                            <div class="testimonial-block">
+                            	<div class="inner">
+                                	<div class="text">Le client est très content, et tout épicurien où. L'utilisation de pertina antiopam amet modera tius fuque finique medi ocrem voluptau deux eius lorem car ils lorem amet dolo lui-même sudu. Ils n'ont pas besoin de chacun d'eux, à travers le décorum, vous travaillerez sur le sadipscing.</div>
+                                    <div class="client-info">
+                                    	<div class="image"><img src="{{ asset('assets/images/resource/client-1.jpg') }}" alt="" /></div>
+                                        <h4>Rashed kabir</h4>
+                                        <div class="designation">Directeur Général</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Testimonial Block-->
+                            <div class="testimonial-block">
+                            	<div class="inner">
+                                	<div class="text">Le client est très content, et tout épicurien où. L'utilisation de pertina antiopam amet modera tius fuque finique medi ocrem voluptau deux eius lorem car ils lorem amet dolo lui-même sudu. Ils n'ont pas besoin de chacun d'eux, à travers le décorum, vous travaillerez sur le sadipscing.</div>
+                                    <div class="client-info">
+                                    	<div class="image"><img src="{{ asset('assets/images/resource/client-1.jpg') }}" alt="" /></div>
+                                        <h4>Rashed kabir</h4>
+                                        <div class="designation">Directeur Général</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Right Column-->
+            <div class="right-column">
+            	<div class="form-outer">
+                	<h2>Demander à être rappelé</h2>
+                	<div class="clearfix">
+                    	<!--Default Form-->
+                    	<div class="default-form">
+                            <form method="post">
+                                <div class="row clearfix">
+        
+                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                        <div class="group-inner">
+                                            <input type="text" name="username" value="" placeholder="Username *" required>
+                                        </div>
+                                    </div>
+        
+                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                        <div class="group-inner">
+                                            <input type="email" name="email" value="" placeholder="Email Address *" required>
+                                        </div>
+                                    </div>
+        
+                                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                        <div class="group-inner">
+                                            <input type="text" name="subject" placeholder="Subject" required>
+                                        </div>
+                                    </div>
+        
+                                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                        <div class="group-inner">
+                                            <textarea name="message" placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                        <button type="submit" class="theme-btn btn-style-one">Envoyez</button>
+                                    </div>
+                                </div>
+                            </form>
+                    	</div>
+                    	<!--End Default Form-->
+					</div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!--End Fullwidth Section One-->
+    
+    <!--News Section-->
+    <section class="news-section">
+    	<div class="auto-container">
+        	<div class="title-box">
+            	<h2>Dernières Nouvelles</h2>
+            </div>
+            
+            <div class="row clearfix">
+            	<div class="left-column col-md-8 col-sm-12 col-xs-12">
+                	
+                    <div class="two-item-carousel">
+                    
+                        <!--News Block-->
+                        <div class="news-block">
+                            <div class="inner-box">
+                                <div class="image-box">
+                                    <a href="{{path('construction')}}"><img src="{{ asset('assets/images/resource/news-1.jpg') }}" alt="" /></a>
+                                </div>
+                                <div class="lower-content">
+                                    <div class="date">13 Feb, 2016  /  Business</div>
+                                    <h3><a href="{{path('construction')}}">Comment devenir un meilleur vendeur en un an</a></h3>
+                                    <div class="text">C'est très important d'avoir un patient qui essaie juste de repousser le recul, le désir de la peine.. </div>
+                                    <a href="{{path('construction')}}" class="read-more">Read More</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    
+                        <!--News Block-->
+                        <div class="news-block">
+                            <div class="inner-box">
+                                <div class="image-box">
+                                    <a href="{{path('construction')}}"><img src="{{ asset('assets/images/resource/news-2.jpg') }}" alt="" /></a>
+                                </div>
+                                <div class="lower-content">
+                                    <div class="date">13 Feb, 2016  /  Business</div>
+                                    <h3><a href="{{path('construction')}}">Comment devenir un meilleur vendeur en un an</a></h3>
+                                    <div class="text">C'est très important d'avoir un patient qui essaie juste de repousser le recul, le désir de la peine..</div>
+                                    <a href="{{path('construction')}}" class="read-more">Read More</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <!--News Block-->
+                        <div class="news-block">
+                            <div class="inner-box">
+                                <div class="image-box">
+                                    <a href="{{path('construction')}}"><img src="{{ asset('assets/images/resource/news-1.jpg') }}" alt="" /></a>
+                                </div>
+                                <div class="lower-content">
+                                    <div class="date">13 Feb, 2016  /  Business</div>
+                                    <h3><a href="{{path('construction')}}">Comment devenir un meilleur vendeur en un an</a></h3>
+                                    <div class="text">C'est très important d'avoir un patient qui essaie juste de repousser le recul, le désir de la peine..</div>
+                                    <a href="{{path('construction')}}" class="read-more">Read More</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    
+                        <!--News Block-->
+                        <div class="news-block">
+                            <div class="inner-box">
+                                <div class="image-box">
+                                    <a href="{{path('construction')}}"><img src="{{ asset('assets/images/resource/news-2.jpg') }}" alt="" /></a>
+                                </div>
+                                <div class="lower-content">
+                                    <div class="date">13 Feb, 2016  /  Business</div>
+                                    <h3><a href="{{path('construction')}}">Comment devenir un meilleur vendeur en un an</a></h3>
+                                    <div class="text">C'est très important d'avoir un patient qui essaie juste de repousser le recul, le désir de la peine.. </div>
+                                    <a href="{{path('construction')}}" class="read-more">Read More</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!--Right Column-->
+                <div class="right-column col-md-4 col-sm-12 col-xs-12">
+                
+                	<!--News Block Two-->
+                	<div class="news-block-two">
+                    	<div class="inner-box">
+                        	<div class="image"><a href="{{path('construction')}}"><img src="{{ asset('assets/images/resource/news-thumb-1.jpg') }}" alt="" /></a></div>
+                            <h3><a href="{{path('construction')}}">Comment les professionnels des affaires fonctionnent pour le client</a></h3>
+                            <div class="date">13 Feb, 2016  /  Business</div>
+                        </div>
+                    </div>
+                    
+                    <!--News Block Two-->
+                	<div class="news-block-two">
+                    	<div class="inner-box">
+                        	<div class="image"><a href="{{path('construction')}}"><img src="{{ asset('assets/images/resource/news-thumb-2.jpg') }}" alt="" /></a></div>
+                            <h3><a href="{{path('construction')}}">Comment les professionnels des affaires fonctionnent pour le client</a></h3>
+                            <div class="date">13 Feb, 2016  /  Business</div>
+                        </div>
+                    </div>
+                    
+                    <!--News Block Two-->
+                	<div class="news-block-two">
+                    	<div class="inner-box">
+                        	<div class="image"><a href="{{path('construction')}}"><img src="{{ asset('assets/images/resource/news-thumb-1.jpg') }}" alt="" /></a></div>
+                            <h3><a href="{{path('construction')}}">Pourquoi Btech-expert est le meilleur sur le marché actuel</a></h3>
+                            <div class="date">13 Feb, 2016  /  Business</div>
+                        </div>
+                    </div>
+                    
+                    <!--News Block Two-->
+                	<div class="news-block-two">
+                    	<div class="inner-box">
+                        	<div class="image"><a href="{{path('construction')}}"><img src="{{ asset('assets/images/resource/news-thumb-3.jpg') }}" alt="" /></a></div>
+                            <h3><a href="{{path('construction')}}">Comment les professionnels des affaires fonctionnent pour le client</a></h3>
+                            <div class="date">13 Feb, 2016  /  Business</div>
+                        </div>
+                    </div>
+                    
+                    <!--News Block Two-->
+                	<div class="news-block-two">
+                    	<div class="inner-box">
+                        	<div class="image"><a href="{{path('construction')}}"><img src="{{ asset('assets/images/resource/news-thumb-1.jpg') }}" alt="" /></a></div>
+                            <h3><a href="{{path('construction')}}">Pourquoi Btech-expert est le meilleur sur le marché actuel</a></h3>
+                            <div class="date">13 Feb, 2016  /  Business</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    <!--End News Section-->
+    
+    <!--Map Section-->
+    <section class="map-section">
+    	<div data-aos="fade-up">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d164.05602432142808!2d2.3459781049724557!3d48.860186108535224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f413ba07f%3A0xea1764e21defb91a!2sRue%20des%20Halles%2C%2075001%20Paris%2C%20France!5e0!3m2!1sen!2scg!4v1679514469449!5m2!1sen!2scg"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
 {% endblock %}
